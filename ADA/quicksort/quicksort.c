@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-// Swap function
+
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// Partition function (pivot = first element)
+
 int partition(int arr[], int low, int high) {
     int pivot = arr[low];
     int i = low + 1;
     int j = high;
 
     while (1) {
-        // Move i right while elements are <= pivot
+        
         while (i <= high && arr[i] <= pivot)
             i++;
 
-        // Move j left while elements are > pivot
+        
         while (arr[j] > pivot)
             j--;
 
